@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+</head>
+
+<body ng-app="myapp">
+
+
+<div ng-controller="HelloController" >
+
+    <h2>Hello {{helloTo.title}} !</h2>
+    <p>1 + 2 = {{ 1 + 2 }}</p>
+    <h5> {{product.name}}</h5>
+    <h5> {{product.price | currency}}</h5>
+    <h5> {{'1388123412323' | date :'mm/dd/yyyy'}}</h5> 
+   <h5> {{product.canPurchase}}</h5>
+</div>
+
+
+<script>
+angular.module("myapp", [])
+    .controller("HelloController", function($scope) {
+        $scope.helloTo = {};
+        $scope.helloTo.title = "World, AngularJS";
+	$scope.product = myObj;
+    } );
+
+var myObj = {
+   name: 'Petrol',
+   price: 78,
+   description : '',
+   canPurchase : true
+}
+</script>
+
+
+
+</body>
+
+</html>  
