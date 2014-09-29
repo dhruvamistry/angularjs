@@ -1,0 +1,35 @@
+<html lang="en" ng-app="fullhtml">
+ <head>
+   <meta charset="utf-8">
+  <title>My HTML File</title>
+  <title>Google Phone Gallery</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+ </head>
+ <body  ng-controller="MyController" >
+ 
+  <p>Nothing here {{'yet' + '!'}}</p>
+  <p>But, something is here {{smily}}</p>
+  <ul>
+    <li>
+      <span>Nexus S</span>
+      <p>
+        Fast just got faster with Nexus S.
+      </p>
+    </li>
+    <li>
+      <span>Motorola XOOM™ with Wi-Fi</span>
+      <p>
+        The Next, Next Generation tablet.
+      </p>
+    </li>
+  </ul>
+  <script>
+  	angular.module("fullhtml", []).
+		controller("MyController", function($scope) {
+			$scope.smily = ":)";	
+	});
+  </script>
+ </body>
+ </html>
